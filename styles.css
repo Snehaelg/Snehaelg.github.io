@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li {
 
 /* Set fonts and theme */
 body {
-    font-family: 'Belinda', 'Brandon Grotesque', sans-serif;
+    font-family: 'Brandon Grotesque', sans-serif;
     background: url('https://images.app.goo.gl/aAPeq6UrSE5E6TZw6') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
@@ -24,6 +24,11 @@ body::before {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: -1;
+}
+
+/* Add logo */
+.header-logo::before {
+    content: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zarla.com%2Fguides%2Fs-logos&psig=AOvVaw10g8dQfRxZ1t_LqTf3fjm-&ust=1692791072253000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCIDm5LGY8IADFQAAAAAdAAAAABAD');
 }
 
 /* Style navigation links */
@@ -88,7 +93,8 @@ nav a:hover {
 .section ul li h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #ffd700;
+    font-family: 'Brandon Grotesque', sans-serif;
+    color: #ffffff;
 }
 
 .section ul li p {
@@ -121,4 +127,96 @@ nav a:hover {
     }
 }
 
-/* Add more styles as needed for other elements */
+/* Style About Me section */
+#about .container {
+    text-align: center;
+}
+
+#about h2 {
+    font-family: 'Belinda', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Style Portfolio section */
+#portfolio .container {
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-family: 'Belinda', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#portfolio ul li h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#portfolio ul li p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Style Certificates section */
+#certificates .container {
+    text-align: center;
+}
+
+#certificates h2 {
+    font-family: 'Belinda', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#certificates ul li h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#certificates ul li p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Style Contact section */
+#contact .container {
+    text-align: center;
+}
+
+#contact h2 {
+    font-family: 'Belinda', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Add responsive layout styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    #about .container,
+    #portfolio .container,
+    #certificates .container,
+    #contact .container {
+        text-align: left;
+    }
+}
+
