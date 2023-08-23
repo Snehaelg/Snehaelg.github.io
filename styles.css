@@ -6,12 +6,11 @@ body, h1, h2, h3, p {
 
 /* Set default font and background */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Belinda', 'Brandon Grotesque', Arial, sans-serif;
     color: #333;
     background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 /* Container */
@@ -44,10 +43,10 @@ header {
 
 /* Style "Welcome to My Portfolio" */
 .welcome-message {
-    font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
+    font-family: 'Belinda', 'Brandon Grotesque', Arial, sans-serif; /* Apply specified fonts */
     text-transform: uppercase; /* Uppercase the text */
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: white;
     margin: 0;
     animation: fadeInOut 3s infinite; /* Add fade in and out animation */
@@ -104,7 +103,6 @@ nav ul li {
     position: absolute;
     bottom: 0;
     width: 100%;
-    animation: fadeIn 3s forwards;
 }
 
 .footer p {
