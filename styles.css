@@ -6,7 +6,7 @@ body, h1, h2, h3, p {
 
 /* Set default font and background */
 body {
-    font-family: 'Belinda', 'Brandon Grotesque', Arial, sans-serif;
+    font-family: 'Brandon Grotesque', sans-serif;
     color: #333;
     background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
     background-size: cover;
@@ -30,33 +30,32 @@ header {
 }
 
 .header-logo {
-    width: 80px; /* Adjust logo width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 100px; /* Increased logo size */
+    height: auto;
 }
 
 .header-title {
     text-align: center;
     font-size: 2.5rem;
-    color: white; /* Change font color to white */
-    animation: fadeInOut 3s infinite; /* Add animation for fading in and out */
+    color: white;
+    animation: fadeInOut 3s infinite;
 }
 
 /* Style "Welcome to My Portfolio" */
 .welcome-message {
-    font-family: 'Belinda', 'Brandon Grotesque', Arial, sans-serif; /* Apply specified fonts */
-    text-transform: uppercase; /* Uppercase the text */
+    font-family: 'Belinda', serif;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 3rem;
+    font-size: 3rem; /* Increased font size */
     color: white;
     margin: 0;
-    animation: fadeInOut 3s infinite; /* Add fade in and out animation */
 }
 
 /* Style "About Me" */
 .about-me {
-    font-family: 'Brandon Grotesque', Arial, sans-serif; /* Apply specified fonts */
-    text-transform: uppercase; /* Uppercase the text */
-    font-size: 1.5rem;
+    font-family: 'Brandon Grotesque', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem; /* Reduced font size */
     color: white;
     text-align: center;
     margin: 0;
@@ -81,7 +80,7 @@ nav ul li {
 
 .section h2 {
     margin-bottom: 1rem;
-    text-transform: uppercase; /* Uppercase the text */
+    text-transform: uppercase;
 }
 
 .section ul {
@@ -105,9 +104,12 @@ nav ul li {
     width: 100%;
 }
 
-.footer p {
-    color: white;
-    font-size: 14px;
+.footer:before {
+    content: "© Sneha Elango";
+    font-family: 'Brandon Grotesque', sans-serif;
+    font-size: 1rem; /* Reduced font size */
+    margin-right: 4px;
+    color: white; /* Set color to white */
 }
 
 /* Add custom icons */
@@ -116,6 +118,7 @@ nav ul li {
     font-weight: 900;
     font-size: 20px;
     margin-right: 10px;
+    color: #007BFF; /* Set icon color to blue */
 }
 
 /* Apply subtle animations */
@@ -160,6 +163,6 @@ a:hover {
         font-size: 2rem;
     }
     .about-me {
-        font-size: 1.2rem;
+        font-size: 1rem; /* Reduced font size */
     }
 }
