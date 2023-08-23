@@ -93,7 +93,7 @@ body {
 }
 
 /* Animation for Copyright "Sneha Elango" */
-.copyright-animation {
+.footer .copyright-animation {
     animation: fadeIn 3s forwards;
 }
 
@@ -153,3 +153,45 @@ body {
         list-style: none;
     }
 }
+/* Your existing CSS styles... */
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .menu {
+        margin-top: 1rem; /* Adjust margin for better spacing on mobile */
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        margin: 5px 0; /* Adjust margin for better spacing on mobile */
+    }
+
+    .section ul {
+        padding-left: 0; /* Remove padding from list on mobile */
+    }
+    
+    .footer {
+        font-size: 0.9rem; /* Adjusted font size for mobile */
+        padding: 1rem; /* Adjusted padding for better spacing on mobile */
+    }
+}
+
+/* Performance optimization */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/2881.jpg');
+    animation: changeBackground 20s infinite;
+    z-index: -1;
+    will-change: transform; /* Improve animation performance */
+    transform: translateZ(0); /* Trigger GPU acceleration */
+    backface-visibility: hidden; /* Further optimization */
+}
+
+/* Other existing CSS styles... */
