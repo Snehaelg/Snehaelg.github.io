@@ -1,113 +1,77 @@
-/* Reset default margin and padding for all elements */
-* {
+/* Reset default margin and padding */
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* Set the background image */
 body {
-    font-family: "Serif", "Cursive", sans-serif;
-    background-image: url("https://images.unsplash.com/photo-1615907579794-8cc77767df8e");
+    background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
+/* Container for the header */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.header-logo {
-    width: 100px; /* Adjust the width as needed */
-    height: auto;
-    margin-right: 10px;
-}
-
-.header-title {
-    flex-grow: 1;
-    display: flex;
     align-items: center;
-}
-
-.header-title h1 {
-    font-size: 24px; /* Adjust the font size as needed */
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    margin-left: 10px;
 }
 
-nav ul {
+/* Logo image */
+.header-logo img {
+    width: 150px; /* Adjust the logo width as needed */
+}
+
+/* Header text */
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    width: 150px; /* Match the logo width */
+}
+
+/* Main navigation menu */
+.nav-menu {
+    display: flex;
+    gap: 2rem;
     list-style: none;
-    display: flex;
-    align-items: center;
+    font-family: 'Belinda', cursive;
 }
 
-nav ul li {
-    margin-right: 20px;
+/* Navigation menu items */
+.nav-menu li {
+    font-size: 18px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #e67e22;
-}
-
+/* Sections */
 .section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    margin: 20px 0;
-    border-radius: 5px;
-    animation: fade-in 1s ease-in-out;
+    padding: 4rem 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-family: 'Brandon Grotesque', sans-serif;
+    text-align: left;
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
-/* Add more specific styles for each section as needed */
+/* Copyright symbol */
+.footer-copyright {
+    font-size: 14px;
+}
+
+/* Add your additional styling here */
 
 /* Adjustments for different screen sizes */
-
 @media (max-width: 768px) {
-    header {
-        text-align: center;
-        padding: 10px;
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .header-title {
-        margin-top: 10px;
-        order: -1;
-    }
-
-    .header-title h1 {
-        font-size: 20px;
-    }
+    /* Add responsive styling here */
 }
