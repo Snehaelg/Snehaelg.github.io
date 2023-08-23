@@ -6,96 +6,105 @@ body, h1, h2, h3, p {
 
 /* Set default font and background */
 body {
-    font-family: 'Cormorant', serif;
-    color: white; /* Change font color to white */
-    background-image: url('https://wallpaperaccess.com/full/3467356.jpg'), url('https://wallpaperaccess.com/full/3159235.jpg');
+    font-family: 'Inknut Antiqua', serif;
     background-size: cover;
     background-position: center;
-    background-color: #fff; /* Fallback color for non-background areas */
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+    margin: 0;
+    padding: 0;
+}
+
+/* Background animations */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/2881.jpg');
     animation: changeBackground 20s infinite; /* Background image animation */
+    z-index: -1;
 }
 
 /* Container */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1rem; /* Reduce padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    justify-content: center;
 }
 
-/* Header */
-header {
-    background: rgba(0, 0, 0, 0.7);
+/* Menu */
+.menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
 }
 
-.header-logo {
-    width: 100px; /* Adjust logo width as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.header-title {
-    text-align: center;
-    font-size: 3rem;
-    color: white;
-    animation: fadeInOut 3s infinite;
-}
-
-/* Style "Welcome to My Portfolio" */
-.welcome-message {
-    font-family: 'Alegreya', serif; /* Apply specified fonts */
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3rem;
-    color: white;
-    margin: 0;
-    animation: fadeInOut 3s infinite; /* Add animation for fading in and out */
-    display: inline-block; /* Ensure it's on a single line */
-}
-
-/* Style "About Me" */
-.about-me {
-    font-family: 'Cormorant', serif;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-    margin: 0;
-}
-
-/* Navigation */
-nav ul {
+.menu ul {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    margin-left: auto;
 }
 
-nav ul li {
-    margin: 0 1rem;
+.menu li {
+    margin: 0 20px;
+    animation: fadeInRight 2s ease forwards;
+    opacity: 0;
 }
 
-/* Section */
+@keyframes fadeInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Sections */
 .section {
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border-radius: 10px;
+    padding: 2rem 0;
+    text-align: center;
+    animation: fadeInUp 2s ease forwards;
+    opacity: 0;
 }
 
-.section h2 {
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
+/* Main animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.section ul {
-    padding: 0;
-    list-style: none;
+/* Animation for Title "Sneha Elango" */
+.title-animation {
+    font-size: 3rem; /* Increased font size */
+    animation: fadeInUp 3s ease-in-out;
 }
 
-.section li {
-    margin-bottom: 0.5rem;
+/* Animation for Copyright "Sneha Elango" */
+.copyright-animation {
+    animation: fadeIn 3s forwards;
+}
+
+/* Background image animation */
+@keyframes changeBackground {
+    0%, 100% {
+        background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/2881.jpg');
+    }
+    50% {
+        background-image: url('https://wallpaperset.com/w/full/6/5/0/48650.jpg');
+    }
 }
 
 /* Footer */
@@ -103,83 +112,44 @@ nav ul li {
     text-align: center;
     padding: 2rem;
     color: white;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    font-size: 1rem; /* Increased font size */
     animation: fadeIn 3s forwards;
 }
 
-.footer:before {
-    content: "© Sneha Elango";
-    font-size: 1rem;
-    margin-right: 4px;
-    color: white;
-}
-
-/* Add custom icons */
-.icon:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 20px;
-    margin-right: 10px;
-    color: #007BFF;
-}
-
-/* Apply subtle animations */
-a {
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-a:hover {
-    color: #007BFF;
-    background-color: rgba(0, 123, 255, 0.1);
-}
-
-/* Main animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Fade In and Out Animation */
-@keyframes fadeInOut {
+/* Smoke effect animation */
+@keyframes smokeEffect {
     0%, 100% {
-        opacity: 0;
+        opacity: 0.1;
     }
     50% {
-        opacity: 1;
+        opacity: 0.4;
     }
 }
 
-/* Background image animation */
-@keyframes changeBackground {
-    0%, 100% {
-        background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for mobile devices */
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    50% {
-        background-image: url('https://wallpaperaccess.com/full/3159235.jpg');
+    .menu li {
+        margin: 10px 0;
+        animation: fadeInUp 2s ease forwards;
+        opacity: 0;
     }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    body {
-        font-family: 'Alegreya', serif; /* Apply different font for mobile */
+    
+    .footer {
+        font-size: 0.9rem; /* Adjusted font size */
     }
-    .container {
-        width: 90%;
+    
+    .section {
+        text-align: center; /* Adjusted text alignment */
     }
-    .header-title {
-        font-size: 2rem;
-    }
-    .welcome-message {
-        font-size: 2rem;
-    }
-    .about-me {
-        font-size: 1rem;
+    
+    /* Removed bullet points from subheadings */
+    .section ul {
+        list-style: none;
     }
 }
