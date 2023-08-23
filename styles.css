@@ -1,77 +1,83 @@
-/* Reset default margin and padding */
-body, h1, h2, h3, p {
+body {
     margin: 0;
     padding: 0;
-}
-
-/* Set the background image */
-body {
-    background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
+    font-family: 'Belinda', 'Bradley Hand', cursive, 'Brandon Grotesque', sans-serif;
+    background: url('https://wallpaperaccess.com/full/3467356.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-/* Container for the header */
 .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    justify-content: center;
+    padding: 1rem 0;
 }
 
-/* Logo image */
-.header-logo img {
-    width: 150px; /* Adjust the logo width as needed */
+.header-logo {
+    width: 100px; /* Adjust logo width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Header text */
-.header-text {
-    font-size: 24px;
-    font-weight: bold;
-    width: 150px; /* Match the logo width */
-}
-
-/* Main navigation menu */
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    font-family: 'Belinda', cursive;
-}
-
-/* Navigation menu items */
-.nav-menu li {
-    font-size: 18px;
-}
-
-/* Sections */
-.section {
-    padding: 4rem 2rem;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    font-family: 'Brandon Grotesque', sans-serif;
-    text-align: left;
-}
-
-/* Footer */
-.footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+.header-title {
     text-align: center;
-    padding: 1rem;
+    font-size: 2rem;
+    animation: fadeIn 3s forwards; /* Add animation for fading in */
 }
 
-/* Copyright symbol */
-.footer-copyright {
-    font-size: 14px;
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-/* Add your additional styling here */
-
-/* Adjustments for different screen sizes */
-@media (max-width: 768px) {
-    /* Add responsive styling here */
+nav ul li {
+    margin: 0 1rem;
 }
+
+.section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.section h2 {
+    margin-bottom: 1rem;
+}
+
+.section ul {
+    padding: 0;
+    list-style: none;
+}
+
+.section li {
+    margin-bottom: 1rem;
+}
+
+.footer {
+    text-align: center;
+    background: url('https://wallpaperaccess.com/full/3159235.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 2rem;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 3s forwards; /* Add animation for fading in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
