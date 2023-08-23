@@ -1,44 +1,69 @@
-body {
+/* Reset default margin and padding */
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    font-family: 'Belinda', 'Bradley Hand', cursive, 'Brandon Grotesque', sans-serif;
-    background: url('https://wallpaperaccess.com/full/3467356.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
+/* Set default font and background */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 2rem;
 }
 
+/* Header */
 header {
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1rem 0;
 }
 
 .header-logo {
-    width: 120px; /* Adjust logo width as needed */
+    width: 80px; /* Adjust logo width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
 .header-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white; /* Change font color to white */
-    animation: fadeIn 3s forwards; /* Add animation for fading in */
+    animation: fadeInOut 3s infinite; /* Add animation for fading in and out */
 }
 
-.header-title span {
-    font-size: 1.5rem; /* Adjust font size as needed */
-    color: white; /* Change font color to white */
-    display: block; /* Display on a new line */
-    animation: fadeIn 3s forwards; /* Add animation for fading in */
+/* Style "Welcome to My Portfolio" */
+.welcome-message {
+    font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
+    text-transform: uppercase; /* Uppercase the text */
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+    animation: fadeInOut 3s infinite; /* Add fade in and out animation */
 }
 
+/* Style "About Me" */
+.about-me {
+    font-family: 'Brandon Grotesque', Arial, sans-serif; /* Apply specified fonts */
+    text-transform: uppercase; /* Uppercase the text */
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -48,6 +73,7 @@ nav ul li {
     margin: 0 1rem;
 }
 
+/* Section */
 .section {
     padding: 2rem;
     margin: 1rem 0;
@@ -56,6 +82,7 @@ nav ul li {
 
 .section h2 {
     margin-bottom: 1rem;
+    text-transform: uppercase; /* Uppercase the text */
 }
 
 .section ul {
@@ -67,6 +94,7 @@ nav ul li {
     margin-bottom: 1rem;
 }
 
+/* Footer */
 .footer {
     text-align: center;
     background: url('https://wallpaperaccess.com/full/3159235.jpg') no-repeat center center fixed;
@@ -76,15 +104,33 @@ nav ul li {
     position: absolute;
     bottom: 0;
     width: 100%;
-    animation: fadeIn 3s forwards; /* Add animation for fading in */
+    animation: fadeIn 3s forwards;
 }
 
-.footer:before {
-    content: "©"; /* Add copyright symbol */
+.footer p {
+    color: white;
     font-size: 14px;
-    margin-right: 4px;
 }
 
+/* Add custom icons */
+.icon:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Apply subtle animations */
+a {
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #007BFF;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Main animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -94,169 +140,28 @@ nav ul li {
     }
 }
 
-/* Add subtle animations */
-a {
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+/* Fade In and Out Animation */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
-a:hover {
-  color: #007BFF;
-  background-color: rgba(0, 123, 255, 0.1);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .header-title {
+        font-size: 2rem;
+    }
+    .welcome-message {
+        font-size: 2rem;
+    }
+    .about-me {
+        font-size: 1.2rem;
+    }
 }
-
-/* Add custom icons */
-.header-logo:before {
-  content: "\f135"; /* FontAwesome icon code for your logo */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 36px;
-  margin-right: 10px;
-}
-
-/* Apply consistent color scheme */
-body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #333;
-  background-image: url("https://wallpaperaccess.com/full/3467356.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-/* Style "Welcome to My Portfolio" */
-.header-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: white; /* Change color to white */
-  margin-top: 0; /* Remove margin to align with logo */
-  animation: fadeIn 3s forwards;
-}
-
-/* Style "About Me" to be in the same line */
-.about-me {
-  display: inline;
-  font-size: 1.5rem;
-  color: white;
-  animation: fadeIn 3s forwards;
-}
-
-/* Other styles remain the same */
-/* Footer */
-.footer {
-  text-align: center;
-  background: url('https://wallpaperaccess.com/full/3159235.jpg') no-repeat center center fixed;
-  background-size: cover;
-  padding: 2rem;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  animation: fadeIn 3s forwards;
-}
-
-.footer:before {
-  content: "©"; /* Add copyright symbol */
-  font-size: 14px;
-  margin-right: 4px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Style "Welcome to My Portfolio" */
-.header-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: white; /* Change color to white */
-  margin-top: 0; /* Remove margin to align with logo */
-  animation: fadeIn 3s forwards;
-  font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
-  text-transform: uppercase; /* Uppercase the text */
-}
-
-/* Style "About Me" to be in the same line */
-.about-me {
-  display: inline;
-  font-size: 1.5rem;
-  color: white;
-  animation: fadeIn 3s forwards;
-  font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
-  text-transform: uppercase; /* Uppercase the text */
-}
-
-/* Other styles remain the same */
-
-/* Footer */
-.footer {
-  text-align: center;
-  background: url('https://wallpaperaccess.com/full/3159235.jpg') no-repeat center center fixed;
-  background-size: cover;
-  padding: 2rem;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  animation: fadeIn 3s forwards;
-}
-
-.footer:before {
-  content: "©"; /* Add copyright symbol */
-  font-size: 14px;
-  margin-right: 4px;
-}
-
-/* Add custom icons */
-.about-me::before {
-  content: "\f007"; /* FontAwesome icon code for about me */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-.portfolio::before {
-  content: "\f1b3"; /* FontAwesome icon code for portfolio */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-.certificate::before {
-  content: "\f0a3"; /* FontAwesome icon code for certificate */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-.contact::before {
-  content: "\f0e0"; /* FontAwesome icon code for contact */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-/* Apply consistent color scheme */
-body {
-  font-family: 'Belinda', cursive, 'Brandon Grotesque', serif;
-  color: #333;
-  background-image: url("https://wallpaperaccess.com/full/3467356.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.container {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Other styles remain the same */
