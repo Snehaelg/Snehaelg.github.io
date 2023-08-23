@@ -6,7 +6,7 @@ body, h1, h2, h3, p {
 
 /* Set default font and background */
 body {
-    font-family: 'Brandon Grotesque', sans-serif;
+    font-family: 'Cormorant', serif;
     color: white; /* Change font color to white */
     background-image: url('https://wallpaperaccess.com/full/3467356.jpg'), url('https://wallpaperaccess.com/full/3159235.jpg');
     background-size: cover;
@@ -45,18 +45,19 @@ header {
 
 /* Style "Welcome to My Portfolio" */
 .welcome-message {
-    font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
+    font-family: 'Alegreya', serif; /* Apply specified fonts */
     text-transform: uppercase;
     text-align: center;
     font-size: 3rem;
     color: white;
     margin: 0;
     animation: fadeInOut 3s infinite; /* Add animation for fading in and out */
+    display: inline-block; /* Ensure it's on a single line */
 }
 
 /* Style "About Me" */
 .about-me {
-    font-family: 'Brandon Grotesque', sans-serif;
+    font-family: 'Cormorant', serif;
     text-transform: uppercase;
     font-size: 1rem;
     color: white;
@@ -166,6 +167,9 @@ a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    body {
+        font-family: 'Alegreya', serif; /* Apply different font for mobile */
+    }
     .container {
         width: 90%;
     }
