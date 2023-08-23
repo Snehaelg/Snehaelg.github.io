@@ -49,7 +49,6 @@ nav ul li {
 }
 
 .section {
-    background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
     margin: 1rem 0;
     border-radius: 10px;
@@ -123,11 +122,13 @@ body {
   background-position: center;
 }
 
-.container {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Style "Welcome to My Portfolio" */
+.header-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white; /* Change color to white */
+  margin-top: 0; /* Remove margin to align with logo */
+  animation: fadeIn 3s forwards;
 }
 
 /* Style "About Me" to be in the same line */
@@ -135,15 +136,6 @@ body {
   display: inline;
   font-size: 1.5rem;
   color: white;
-  animation: fadeIn 3s forwards;
-}
-
-/* Style "Welcome to My Portfolio" */
-.header-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: white; /* Change color to white */
-  margin-top: 0; /* Remove margin to align with logo */
   animation: fadeIn 3s forwards;
 }
 
@@ -160,4 +152,90 @@ body {
   bottom: 0;
   width: 100%;
   animation: fadeIn 3s forwards;
+}
+
+/* Add subtle animations */
+a {
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #007BFF;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Add custom icons */
+.header-logo:before {
+  content: "\f135"; /* FontAwesome icon code for your logo */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+/* Apply consistent color scheme */
+body {
+  font-family: 'Belinda', cursive, 'Brandon Grotesque', serif;
+  color: #333;
+  background-image: url("https://wallpaperaccess.com/full/3467356.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style "Welcome to My Portfolio" */
+.header-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white; /* Change color to white */
+  margin-top: 0; /* Remove margin to align with logo */
+  animation: fadeIn 3s forwards;
+  font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
+  text-transform: uppercase; /* Uppercase the text */
+}
+
+/* Style "About Me" to be in the same line */
+.about-me {
+  display: inline;
+  font-size: 1.5rem;
+  color: white;
+  animation: fadeIn 3s forwards;
+  font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
+  text-transform: uppercase; /* Uppercase the text */
+}
+
+/* Other styles remain the same */
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: url('https://wallpaperaccess.com/full/3159235.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 2rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: fadeIn 3s forwards;
+}
+
+.footer:before {
+  content: "©"; /* Add copyright symbol */
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
