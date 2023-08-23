@@ -6,18 +6,19 @@ body, h1, h2, h3, p {
 
 /* Set default font and background */
 body {
-    font-family: 'Brandon Grotesque', sans-serif;
+    font-family: 'Brandon Grotesque', serif;
     color: #333;
-    background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
+    background-image: url('https://wallpaperaccess.com/full/3467356.jpg'), url('https://wallpaperaccess.com/full/3159235.jpg');
     background-size: cover;
     background-position: center;
+    background-color: #fff; /* Fallback color for non-background areas */
 }
 
 /* Container */
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem; /* Reduce padding */
 }
 
 /* Header */
@@ -30,32 +31,33 @@ header {
 }
 
 .header-logo {
-    width: 100px; /* Increased logo size */
-    height: auto;
+    width: 100px; /* Adjust logo width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .header-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: white;
     animation: fadeInOut 3s infinite;
 }
 
 /* Style "Welcome to My Portfolio" */
 .welcome-message {
-    font-family: 'Belinda', serif;
+    font-family: 'Brandon Grotesque', serif;
     text-transform: uppercase;
     text-align: center;
-    font-size: 3rem; /* Increased font size */
+    font-size: 3rem;
     color: white;
     margin: 0;
+    animation: fadeInOut 3s infinite; /* Add animation for fading in and out */
 }
 
 /* Style "About Me" */
 .about-me {
-    font-family: 'Brandon Grotesque', sans-serif;
+    font-family: 'Brandon Grotesque', serif;
     text-transform: uppercase;
-    font-size: 1.2rem; /* Reduced font size */
+    font-size: 1rem;
     color: white;
     text-align: center;
     margin: 0;
@@ -65,6 +67,8 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 nav ul li {
@@ -73,13 +77,13 @@ nav ul li {
 
 /* Section */
 .section {
-    padding: 2rem;
-    margin: 1rem 0;
+    padding: 1rem; /* Reduce spacing */
+    margin: 0.5rem 0; /* Reduce margin */
     border-radius: 10px;
 }
 
 .section h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduce margin bottom */
     text-transform: uppercase;
 }
 
@@ -89,27 +93,25 @@ nav ul li {
 }
 
 .section li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduce margin bottom */
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    background: url('https://wallpaperaccess.com/full/3159235.jpg') no-repeat center center fixed;
-    background-size: cover;
     padding: 2rem;
     color: white;
     position: absolute;
     bottom: 0;
     width: 100%;
+    animation: fadeIn 3s forwards;
 }
 
 .footer:before {
     content: "© Sneha Elango";
-    font-family: 'Brandon Grotesque', sans-serif;
-    font-size: 1rem; /* Reduced font size */
+    font-size: 1rem;
     margin-right: 4px;
-    color: white; /* Set color to white */
+    color: white;
 }
 
 /* Add custom icons */
@@ -118,7 +120,7 @@ nav ul li {
     font-weight: 900;
     font-size: 20px;
     margin-right: 10px;
-    color: #007BFF; /* Set icon color to blue */
+    color: #007BFF; /* Change icon color to blue */
 }
 
 /* Apply subtle animations */
@@ -163,6 +165,6 @@ a:hover {
         font-size: 2rem;
     }
     .about-me {
-        font-size: 1rem; /* Reduced font size */
+        font-size: 1rem;
     }
 }
