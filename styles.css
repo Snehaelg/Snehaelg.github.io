@@ -6,12 +6,13 @@ body, h1, h2, h3, p {
 
 /* Set default font and background */
 body {
-    font-family: 'Brandon Grotesque', serif;
-    color: #333;
+    font-family: 'Brandon Grotesque', sans-serif;
+    color: white; /* Change font color to white */
     background-image: url('https://wallpaperaccess.com/full/3467356.jpg'), url('https://wallpaperaccess.com/full/3159235.jpg');
     background-size: cover;
     background-position: center;
     background-color: #fff; /* Fallback color for non-background areas */
+    animation: changeBackground 20s infinite; /* Background image animation */
 }
 
 /* Container */
@@ -44,7 +45,7 @@ header {
 
 /* Style "Welcome to My Portfolio" */
 .welcome-message {
-    font-family: 'Brandon Grotesque', serif;
+    font-family: 'Belinda', cursive, 'Brandon Grotesque', serif; /* Apply specified fonts */
     text-transform: uppercase;
     text-align: center;
     font-size: 3rem;
@@ -55,7 +56,7 @@ header {
 
 /* Style "About Me" */
 .about-me {
-    font-family: 'Brandon Grotesque', serif;
+    font-family: 'Brandon Grotesque', sans-serif;
     text-transform: uppercase;
     font-size: 1rem;
     color: white;
@@ -67,8 +68,8 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -77,13 +78,13 @@ nav ul li {
 
 /* Section */
 .section {
-    padding: 1rem; /* Reduce spacing */
-    margin: 0.5rem 0; /* Reduce margin */
+    padding: 1rem;
+    margin: 0.5rem 0;
     border-radius: 10px;
 }
 
 .section h2 {
-    margin-bottom: 0.5rem; /* Reduce margin bottom */
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
 
@@ -93,7 +94,7 @@ nav ul li {
 }
 
 .section li {
-    margin-bottom: 0.5rem; /* Reduce margin bottom */
+    margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -120,7 +121,7 @@ nav ul li {
     font-weight: 900;
     font-size: 20px;
     margin-right: 10px;
-    color: #007BFF; /* Change icon color to blue */
+    color: #007BFF;
 }
 
 /* Apply subtle animations */
@@ -150,6 +151,16 @@ a:hover {
     }
     50% {
         opacity: 1;
+    }
+}
+
+/* Background image animation */
+@keyframes changeBackground {
+    0%, 100% {
+        background-image: url('https://wallpaperaccess.com/full/3467356.jpg');
+    }
+    50% {
+        background-image: url('https://wallpaperaccess.com/full/3159235.jpg');
     }
 }
 
